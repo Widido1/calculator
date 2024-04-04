@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-export default function Numeric_b(n){
+export default function NumericB(n){
     const [number, setnumber] = useState(n);
 
     return (

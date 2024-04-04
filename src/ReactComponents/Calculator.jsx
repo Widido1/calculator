@@ -1,33 +1,31 @@
 import React, {useState, useEffect} from "react";
-import Number_box from "./Number_box";
-import Numeric_b from "./numeric_b";
-import Clear_b from "./clear_b";
-import Result_b from "./Result_b";
+import NumberBox from "./Number_box";
+import NumericB from "./Numeric_b";
 
 export default function Calculator(){
 
     return(
         <div id="Calculator">
             <section>
-                <Number_box/>
+                <NumberBox/>
             </section>
             <section>
-                <Numeric_b value="7" />
-                <Numeric_b value="8" />
-                <Numeric_b value="9" />
+                <NumericB value="7" />
+                <NumericB value="8" />
+                <NumericB value="9" />
             </section>
             <section>
-                <Numeric_b value="4" />
-                <Numeric_b value="5" />
-                <Numeric_b value="6" />
+                <NumericB value="4" />
+                <NumericB value="5" />
+                <NumericB value="6" />
             </section>
             <section>
-                <Numeric_b value="1" />
-                <Numeric_b value="2" />
-                <Numeric_b value="3" />
+                <NumericB value="1" />
+                <NumericB value="2" />
+                <NumericB value="3" />
             </section>
             <section>
-                <Numeric_b value="0" />
+                <NumericB value="0" />
             </section>
         </div>
     );
