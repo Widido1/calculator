@@ -10,7 +10,7 @@ export default function NumberBox(){
 
     return(
         <div>
-            <textbox>{finalNumber}</textbox>
+            <textbox></textbox>
         </div>
     );
 };
