@@ -7,10 +7,12 @@
   background-color: blue;
   width: 600px;
   height: 600px;
+  z-index: 2;
 }
 
 #Number_Box{
   background-color: green;
   width: 100px;
   height: 50px;
+  z-index: 1;
 }
