@@ -25,7 +25,7 @@ body {
   height: 100px;
 }
 
-#4x3{
+#Calculator1-9{
   display: grid;
   grid-template-columns: 150px 150px 150px 150px;
   align-items: center;

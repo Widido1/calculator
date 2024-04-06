@@ -6,7 +6,7 @@ import Operator_b from "./Operator_b";
 export default function CalculatorBox(){
     return(
         <div id="Calculator">
-           <div id="4x3">
+           <div id="Calculator1-9">
                 <NumericB />
                 <NumericB />
                 <NumericB />
