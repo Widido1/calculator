@@ -9,20 +9,27 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #434340;
 }
 
 .b1{
   border-radius: 15px;
-  background-color: #FEFFDE;
+  background-color: #FFFD81;
   width: 100px;
   height: 100px;
+}
+.b1:hover{
+  background-color: #FDFFB7;
 }
 
 .b2{
   border-radius: 15px;
-  background-color: #FFFD81;
+  background-color: #ADFF78;
   width: 100px;
   height: 100px;
+}
+.b2:hover{
+  background-color: #C9FFA6;
 }
 
 #Calculator1-9{
