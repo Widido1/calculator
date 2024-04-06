@@ -1,12 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .b1{
   border-radius: 1,5px;
-  background-color: black;
+  background-color: #FEFFDE;
+  width: 100px;
+  height: 100px;
 }
 
 #Calculator{
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  background-color: blue;
+  grid-template-columns: 200px 200px 200px;
+  align-items: center;
+  justify-items: center;
+  background-color: #CFF414;
   width: 600px;
   height: 600px;
   z-index: 2;
