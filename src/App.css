@@ -5,6 +5,8 @@
 
 #Calculator{
   display: flex;
+  flex-direction: row;
+  columns: 3;
   background-color: blue;
   width: 600px;
   height: 600px;
