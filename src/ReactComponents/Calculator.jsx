@@ -6,18 +6,23 @@ import Operator_b from "./Operator_b";
 export default function CalculatorBox(){
     return(
         <div id="Calculator">
-            <NumericB />
-            <NumericB />
-            <NumericB />
-            <Operator_b/>
-            <NumericB />
-            <NumericB />
-            <NumericB />
-            <Operator_b/>
-            <NumericB />
-            <NumericB />
-            <NumericB />
-            <Operator_b/>
+           <div id="4x3">
+                <NumericB />
+                <NumericB />
+                <NumericB />
+                <Operator_b/>
+                <NumericB />
+                <NumericB />
+                <NumericB />
+                <Operator_b/>
+                <NumericB />
+                <NumericB />
+                <NumericB />
+                <Operator_b/>
+                <NumericB />
+            </div> 
+
+
 
         </div>
     );

@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 export default function Operator_b(){
     return(
         <div>
-            <button>O</button>
+            <button class="b2">O</button>
         </div>
     )
 }

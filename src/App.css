@@ -12,13 +12,20 @@ body {
 }
 
 .b1{
-  border-radius: 1,5px;
+  border-radius: 15px;
   background-color: #FEFFDE;
   width: 100px;
   height: 100px;
 }
 
-#Calculator{
+.b2{
+  border-radius: 15px;
+  background-color: #FFFD81;
+  width: 100px;
+  height: 100px;
+}
+
+#4x3{
   display: grid;
   grid-template-columns: 150px 150px 150px 150px;
   align-items: center;
