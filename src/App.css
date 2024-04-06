@@ -4,9 +4,8 @@
 }
 
 #Calculator{
-  display: flex;
-  flex-direction: column;
-  columns: 3;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
   background-color: blue;
   width: 600px;
   height: 600px;
