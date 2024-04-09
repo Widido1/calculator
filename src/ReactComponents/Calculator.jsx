@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 //import NumberBox from "./Number_box";
 import NumericB from "./numeric_b";
+import NumericB0 from "./numeric_b0";
 import Operator_b from "./Operator_b";
 
 export default function CalculatorBox(){
@@ -22,6 +23,7 @@ export default function CalculatorBox(){
             </div>
             <div id="Calculator0">
                 <NumericB0/>
+                <Operator_b/>
                 <Operator_b/>
             </div> 
 
