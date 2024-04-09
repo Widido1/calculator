@@ -34,13 +34,27 @@ body {
   min-width: 50px;
   height: 50px;
 }
-.b2:hover{
+.b2:hover, .bAC:hover{
   background-color: #C9FFA6;
 }
+
+.bAC{
+  border-radius: 15px;
+  background-color: #00a8a8;
+  min-width: 175px;
+  height: 50px;
+}
+#CalculatorScreen{
+  height: 100px;
+  background-color: white
+  ;
+}
+
 #CalculatorAC{
   display: grid;
-  grid-template-columns: 225px 75px;
-  background-color: teal;
+  grid-template-columns: 200px 75px;
+  background-color: #CFF414;
+  justify-content: center;
 }
 
 #Calculator1-9{
@@ -60,7 +74,7 @@ body {
   justify-items: center;
   width: 300px;
   height: 75px;
-  background-color: white;
+  background-color: #CFF414;
 }
 
 #Number_Box{

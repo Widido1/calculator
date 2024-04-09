@@ -3,10 +3,19 @@ import React, {useState, useEffect} from "react";
 import NumericB from "./numeric_b";
 import NumericB0 from "./numeric_b0";
 import Operator_b from "./Operator_b";
+import Operator_bAC from "./Operator_bAC";
+import Screen from "./Screen";
 
 export default function CalculatorBox(){
     return(
         <div id="Calculator">
+            <div id="CalculatorScreen">
+                <Screen />
+            </div>
+            <div id="CalculatorAC">
+                <Operator_bAC/>
+                <Operator_b/>
+            </div>
            <div id="Calculator1-9">
                 <NumericB />
                 <NumericB />
