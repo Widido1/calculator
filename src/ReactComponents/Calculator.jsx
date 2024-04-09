@@ -20,7 +20,7 @@ export default function CalculatorBox(){
                 <NumericB />
                 <Operator_b/>
             </div>
-            <div>
+            <div id="Calculator0">
                 <NumericB />
                 <Operator_b/>
             </div> 
