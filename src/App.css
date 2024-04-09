@@ -32,6 +32,10 @@ body {
   background-color: #C9FFA6;
 }
 
+.big1{
+  width: 450px;
+}
+
 #Calculator1-9{
   display: grid;
   grid-template-columns: 150px 150px 150px 150px;

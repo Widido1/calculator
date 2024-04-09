@@ -21,7 +21,7 @@ export default function CalculatorBox(){
                 <Operator_b/>
             </div>
             <div id="Calculator0">
-                <NumericB />
+                <NumericB class="big1"/>
                 <Operator_b/>
             </div> 
 
