@@ -15,7 +15,7 @@ body {
 .b1{
   border-radius: 15px;
   background-color: #FFFD81;
-  width: 100px;
+  min-width: 100px;
   height: 100px;
 }
 .b1:hover{
@@ -25,7 +25,7 @@ body {
 .b2{
   border-radius: 15px;
   background-color: #ADFF78;
-  width: 100px;
+  min-width: 100px;
   height: 100px;
 }
 .b2:hover{
