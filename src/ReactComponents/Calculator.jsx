@@ -9,9 +9,10 @@ import Screen from "./Screen";
 export default function CalculatorBox(){
     return(
         <div id="Calculator">
-            <div id="CalculatorScreen">
+            <div>
                 <Screen />
             </div>
+
             <div id="CalculatorAC">
                 <Operator_bAC/>
                 <Operator_b/>

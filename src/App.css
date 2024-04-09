@@ -11,6 +11,10 @@ body {
   height: 100vh;
   background-color: #434340;
 }
+textbox {
+  padding: 0;
+  margin: 0;
+}
 .b0{
   border-radius: 15px;
   background-color: #FFFD81;
@@ -45,9 +49,31 @@ body {
   height: 50px;
 }
 #CalculatorScreen{
-  height: 100px;
-  background-color: white
-  ;
+  display: grid;
+  grid-template-rows: 30px 30px;
+  justify-content: center;
+  height: 80px;
+  background-color: #CFF414;
+  padding-top: 10px;
+}
+#Screen1{
+  display: block;
+  width: 250px;
+  background-color: #00502f;
+  color: white;
+  text-align: right;
+  margin-top: 5px;
+  padding-right: 8px;
+  font-size: 13px;
+}
+#Screen2{
+  display: block;
+  width: 250px;
+  background-color: #00502f;
+  color: white;
+  text-align: right;
+  padding-right: 8px;
+  font-size: 20px;
 }
 
 #CalculatorAC{
