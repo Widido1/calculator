@@ -18,7 +18,7 @@ textbox {
 .b0{
   border-radius: 15px;
   background-color: #FFFD81;
-  min-width: 130px;
+  min-width: 115px;
   height: 50px;
 }
 .b1{
@@ -48,6 +48,7 @@ textbox {
   min-width: 175px;
   height: 50px;
 }
+
 #CalculatorScreen{
   display: grid;
   grid-template-rows: 30px 30px;
@@ -55,6 +56,7 @@ textbox {
   height: 80px;
   background-color: #CFF414;
   padding-top: 10px;
+  border-radius: 15px 15px 0px 0px;
 }
 #Screen1{
   display: block;
@@ -78,29 +80,34 @@ textbox {
 
 #CalculatorAC{
   display: grid;
-  grid-template-columns: 200px 75px;
+  grid-template-columns: 195px 50px;
   background-color: #CFF414;
   justify-content: center;
+  padding-top: 5px;
+  height: 60px;
 }
 
 #Calculator1-9{
   display: grid;
-  grid-template-columns: 75px 75px 75px 75px;
+  grid-template-columns: 65px 65px 65px 65px;
+  justify-content: center;
   align-items: center;
   justify-items: center;
   background-color: #CFF414;
   width: 300px;
-  height: 300px;
+  height: 230px;
   z-index: 2;
 }
 #Calculator0{
   display: grid;
-  grid-template-columns: 150px 75px 75px;
+  grid-template-columns: 130px 65px 65px;
   align-items: center;
   justify-items: center;
+  justify-content: center;
   width: 300px;
   height: 75px;
   background-color: #CFF414;
+  border-radius: 0px 0px 15px 15px;
 }
 
 #Number_Box{
