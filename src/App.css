@@ -18,6 +18,7 @@ body {
   min-width: 100px;
   height: 100px;
 }
+
 .b1:hover{
   background-color: #FDFFB7;
 }
@@ -32,8 +33,9 @@ body {
   background-color: #C9FFA6;
 }
 
-.big1{
-  width: 450px;
+#cero_b{
+  min-width: 200px;
+  border-radius: 45px;
 }
 
 #Calculator1-9{
@@ -53,6 +55,7 @@ body {
   justify-items: center;
   width: 600px;
   height: 150px;
+  background-color: white;
 }
 
 #Number_Box{
