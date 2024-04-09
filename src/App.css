@@ -11,7 +11,12 @@ body {
   height: 100vh;
   background-color: #434340;
 }
-
+.b0{
+  border-radius: 15px;
+  background-color: #FFFD81;
+  min-width: 300px;
+  height: 100px;
+}
 .b1{
   border-radius: 15px;
   background-color: #FFFD81;
@@ -31,11 +36,6 @@ body {
 }
 .b2:hover{
   background-color: #C9FFA6;
-}
-
-#cero_b{
-  min-width: 200px;
-  border-radius: 45px;
 }
 
 #Calculator1-9{
