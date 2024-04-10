@@ -24,26 +24,26 @@ export default function CalculatorBox(){
 
             <div id="CalculatorAC">
                 <Operator_bAC/>
-                <Operator_b/>
+                <Operator_b value={"="}/>
             </div>
            <div id="Calculator1-9">
                 <NumericB addNumber={addNumber} value={7}/>
-                <NumericB />
-                <NumericB />
-                <Operator_b/>
-                <NumericB />
-                <NumericB />
-                <NumericB />
-                <Operator_b/>
-                <NumericB />
-                <NumericB />
-                <NumericB />
-                <Operator_b/>
+                <NumericB addNumber={addNumber} value={8}/>
+                <NumericB addNumber={addNumber} value={9}/>
+                <Operator_b value={"+"}/>
+                <NumericB addNumber={addNumber} value={4}/>
+                <NumericB addNumber={addNumber} value={5}/>
+                <NumericB addNumber={addNumber} value={6}/>
+                <Operator_b value={"-"}/>
+                <NumericB addNumber={addNumber} value={1}/>
+                <NumericB addNumber={addNumber} value={2}/>
+                <NumericB addNumber={addNumber} value={3}/>
+                <Operator_b value={"*"}/>
             </div>
             <div id="Calculator0">
                 <NumericB0/>
-                <Operator_b/>
-                <Operator_b/>
+                <Operator_b value={"."}/>
+                <Operator_b value={"/"}/>
             </div> 
 
 

@@ -8,7 +8,7 @@ export default function NumericB(props){
     
     
     return (    
-        <button className="b1" onClick={() => props.addNumber(bNumber)}>B1</button>
+        <button className="b1" onClick={() => props.addNumber(bNumber)}>{bNumber}</button>
     );
         
 
