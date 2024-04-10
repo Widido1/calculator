@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from "react";
 
-export default function NumericB(addNumber, value){  
+export default function NumericB(props){  
     const [bNumber, setbNumber] = useState(0);
-    useEffect((value)=>{
-        setbNumber(value);
+    useEffect(()=>{
+        setbNumber(props.value);
     }, []);
     
     
     return (    
-        <button className="b1" onClick={() => addNumber(bNumber)}>B1</button>
+        <button className="b1" onClick={() => props.addNumber(bNumber)}>B1</button>
     );
         
 
