@@ -10,6 +10,7 @@ export default function CalculatorBox(){
     const [N1, setN1] = useState(0);
     const [Op, setOp] = useState("number1");
     const [N2, setN2] = useState(0);
+    const [R, setR] = useState(0);
 
     const addNumber = (number) => {
         if(Op == "number1"){
@@ -19,12 +20,24 @@ export default function CalculatorBox(){
         }else{
             let resulter = N2*10 + number;
             setN2(resulter);
-            console.log("Resulter: " + resulter + " N1: " + N1);
+            console.log("Resulter 2: " + resulter + " N2: " + N2);
         }
         
     };
     const addResult = () =>{
-
+        if(Op == "+"){
+            let res = N1+N2;
+            setR(res); console.log("Result: " + res);
+        }else if(Op == "-"){
+            let res = N1-N2;
+            setR(res); console.log("Result: " + res);
+        }else if(Op == "*"){
+            let res = N1*N2;
+            setR(res); console.log("Result: " + res);
+        }else if(Op == "/"){
+            let res = N1/N2;
+            setR(res); console.log("Result: " + res);
+        }
     }
     const addOperator = (button_O) =>{
         if(Op == "number1" && button_O != "="){
