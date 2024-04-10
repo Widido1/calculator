@@ -8,13 +8,20 @@ import Screen from "./Screen";
 
 export default function CalculatorBox(){
     const [N1, setN1] = useState(0);
-    const [Op, setOp] = useState(0);
+    const [Op, setOp] = useState("number1");
     const [N2, setN2] = useState(0);
 
     const addNumber = (number) => {
-        let resulter = N1*10 + number;
-        setN1(resulter);
-        console.log("Resulter: " + resulter + " N1: " + N1);
+        if(Op == "number1"){
+            let resulter = N1*10 + number;
+            setN1(resulter);
+            console.log("Resulter: " + resulter + " N1: " + N1);
+        }else{
+            let resulter = N2*10 + number;
+            setN2(resulter);
+            console.log("Resulter: " + resulter + " N1: " + N1);
+        }
+        
     };
     return(
         <div id="Calculator">
@@ -41,7 +48,7 @@ export default function CalculatorBox(){
                 <Operator_b value={"*"}/>
             </div>
             <div id="Calculator0">
-                <NumericB0/>
+                <NumericB0 addNumber={addNumber}/>
                 <Operator_b value={"."}/>
                 <Operator_b value={"/"}/>
             </div> 
