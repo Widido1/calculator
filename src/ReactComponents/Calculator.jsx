@@ -23,6 +23,29 @@ export default function CalculatorBox(){
         }
         
     };
+    const addResult = () =>{
+
+    }
+    const addOperator = (button_O) =>{
+        if(Op == "number1" && button_O != "="){
+            switch(button_O){
+                case "+":
+                    setOp("+"); console.log("Operator: +")
+                    break;
+                case "-":
+                    setOp("-"); console.log("Operator: -")
+                    break;
+                case "*":
+                    setOp("*"); console.log("Operator: *")
+                    break;
+                case "/":
+                    setOp("/"); console.log("Operator: /")
+                    break;
+            }
+        }else{
+            addResult();
+        }
+    }
     return(
         <div id="Calculator">
             <div>
@@ -37,20 +60,20 @@ export default function CalculatorBox(){
                 <NumericB addNumber={addNumber} value={7}/>
                 <NumericB addNumber={addNumber} value={8}/>
                 <NumericB addNumber={addNumber} value={9}/>
-                <Operator_b value={"+"}/>
+                <Operator_b addOperator={addOperator} value={"+"}/>
                 <NumericB addNumber={addNumber} value={4}/>
                 <NumericB addNumber={addNumber} value={5}/>
                 <NumericB addNumber={addNumber} value={6}/>
-                <Operator_b value={"-"}/>
+                <Operator_b addOperator={addOperator}value={"-"}/>
                 <NumericB addNumber={addNumber} value={1}/>
                 <NumericB addNumber={addNumber} value={2}/>
                 <NumericB addNumber={addNumber} value={3}/>
-                <Operator_b value={"*"}/>
+                <Operator_b addOperator={addOperator} value={"*"}/>
             </div>
             <div id="Calculator0">
                 <NumericB0 addNumber={addNumber}/>
                 <Operator_b value={"."}/>
-                <Operator_b value={"/"}/>
+                <Operator_b addOperator={addOperator} value={"/"}/>
             </div> 
 
 

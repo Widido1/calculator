@@ -8,7 +8,7 @@ export default function Operator_b(props){
     }, []);
     return(
         <div>
-            <button className="b2">{operator}</button>
+            <button className="b2" onClick={() => props.addOperator(operator)}>{operator}</button>
         </div>
     )
 }
