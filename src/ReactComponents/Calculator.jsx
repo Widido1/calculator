@@ -7,6 +7,15 @@ import Operator_bAC from "./Operator_bAC";
 import Screen from "./Screen";
 
 export default function CalculatorBox(){
+    const [N1, setN1] = useState(0);
+    const [Op, setOp] = useState(0);
+    const [N2, setN2] = useState(0);
+
+    const addNumber = (number) => {
+        let resulter = N1*10 + number;
+        setN1(resulter);
+        console.log("Resulter: " + resulter + " N1: " + N1);
+    };
     return(
         <div id="Calculator">
             <div>
@@ -18,7 +27,7 @@ export default function CalculatorBox(){
                 <Operator_b/>
             </div>
            <div id="Calculator1-9">
-                <NumericB />
+                <NumericB addNumber={addNumber} value={7}/>
                 <NumericB />
                 <NumericB />
                 <Operator_b/>
