@@ -8,55 +8,72 @@ import Screen from "./Screen";
 
 export default function CalculatorBox(){
     const [N1, setN1] = useState(0);
-    const [Op, setOp] = useState("number1");
+    const [Op, setOp] = useState("default_O");
     const [N2, setN2] = useState(0);
     const [R, setR] = useState(0);
+    const [targetN, setTargetN] = useState("N1");
 
     const addNumber = (number) => {
-        if(Op == "number1"){
+        if(targetN == "N1"){
             let resulter = N1*10 + number;
             setN1(resulter);
-            console.log("Resulter: " + resulter + " N1: " + N1);
-        }else{
+            console.log("Resulter: " + resulter + " N1: " + N1 +" Operator: " + Op);
+            setR(0);
+        }else if(R != 0){
+            setN1(R);
+            setR(0);
             let resulter = N2*10 + number;
             setN2(resulter);
-            console.log("Resulter 2: " + resulter + " N2: " + N2);
+            console.log("Resulter 2: " + resulter + " N2: " + N2 +" Operator: " + Op);
+        }else{
+            setR(0);
+            let resulter = N2*10 + number;
+            setN2(resulter);
+            console.log("Resulter 2: " + resulter + " N2: " + N2 +" Operator: " + Op);
         }
         
     };
     const addResult = () =>{
         if(Op == "+"){
-            let res = N1+N2;
+            let res = N1 + N2;
             setR(res); console.log("Result: " + res);
+            setN1(0); setN2(0); setOp("+"); console.log(" Operator: "+ Op);
         }else if(Op == "-"){
-            let res = N1-N2;
+            let res = N1 - N2;
             setR(res); console.log("Result: " + res);
+            setN1(0); setN2(0); setOp("-"); console.log(" Operator: "+ Op);
         }else if(Op == "*"){
             let res = N1*N2;
             setR(res); console.log("Result: " + res);
+            setN1(0); setN2(0); setOp("*"); console.log(" Operator: "+ Op);
         }else if(Op == "/"){
             let res = N1/N2;
             setR(res); console.log("Result: " + res);
+            setN1(0); setN2(0); setOp("/"); console.log(" Operator: "+ Op);
         }
     }
     const addOperator = (button_O) =>{
-        if(Op == "number1" && button_O != "="){
+        if(targetN == "N1"){
             switch(button_O){
                 case "+":
-                    setOp("+"); console.log("Operator: +")
+                    setOp("+"); setTargetN("N2"); console.log("switch: Operator: +"); 
                     break;
                 case "-":
-                    setOp("-"); console.log("Operator: -")
+                    setOp("-"); setTargetN("N2"); console.log("switch: Operator: -")
                     break;
                 case "*":
-                    setOp("*"); console.log("Operator: *")
+                    setOp("*"); setTargetN("N2"); console.log("switch: Operator: *")
                     break;
                 case "/":
-                    setOp("/"); console.log("Operator: /")
+                    setOp("/"); setTargetN("N2"); console.log("switch: Operator: /")
                     break;
+                default:
+                    break
             }
         }else{
+            console.log("llegamos a addResult()");
             addResult();
+            console.log(" Operator: "+ Op);
         }
     }
     return(
@@ -77,7 +94,7 @@ export default function CalculatorBox(){
                 <NumericB addNumber={addNumber} value={4}/>
                 <NumericB addNumber={addNumber} value={5}/>
                 <NumericB addNumber={addNumber} value={6}/>
-                <Operator_b addOperator={addOperator}value={"-"}/>
+                <Operator_b addOperator={addOperator} value={"-"}/>
                 <NumericB addNumber={addNumber} value={1}/>
                 <NumericB addNumber={addNumber} value={2}/>
                 <NumericB addNumber={addNumber} value={3}/>
