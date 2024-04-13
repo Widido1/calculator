@@ -37,19 +37,16 @@ export default function CalculatorBox(){
         if(Op == "+"){
             let res = N1 + N2;
             setR(res); console.log("Result: " + res);
-            setN1(0); setN2(0); setOp("+"); console.log(" Operator: "+ Op);
         }else if(Op == "-"){
             let res = N1 - N2;
             setR(res); console.log("Result: " + res);
-            setN1(0); setN2(0); setOp("-"); console.log(" Operator: "+ Op);
         }else if(Op == "*"){
             let res = N1*N2;
             setR(res); console.log("Result: " + res);
-            setN1(0); setN2(0); setOp("*"); console.log(" Operator: "+ Op);
         }else if(Op == "/"){
             let res = N1/N2;
             setR(res); console.log("Result: " + res);
-            setN1(0); setN2(0); setOp("/"); console.log(" Operator: "+ Op);
+
         }
     }
     const addOperator = (button_O) =>{
@@ -74,6 +71,7 @@ export default function CalculatorBox(){
             console.log("llegamos a addResult()");
             addResult();
             console.log(" Operator: "+ Op);
+            setN1(0); setN2(0); setOp(button_O); console.log(" Operator: "+ Op);
         }
     }
     return(
