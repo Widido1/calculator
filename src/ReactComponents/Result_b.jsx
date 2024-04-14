@@ -4,7 +4,7 @@ export default function Result_b(props){
 
     return(
         <div>
-            <button id="button=" onClick={()=> props.result()}>=</button>
+            <button className="b2" onClick={()=> props.result()}>=</button>
         </div>
     );
 }
