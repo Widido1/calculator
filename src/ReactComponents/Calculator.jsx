@@ -5,6 +5,7 @@ import NumericB0 from "./numeric_b0";
 import Operator_b from "./Operator_b";
 import Operator_bAC from "./Operator_bAC";
 import Screen from "./Screen";
+import Result_b from "./Result_b";
 
 export default function CalculatorBox(){
     const [N1, setN1] = useState(0);
@@ -14,9 +15,24 @@ export default function CalculatorBox(){
     const [targetN, setTargetN] = useState("N1");
 
     const clearAc = () => {
-        setR(0); setN1(0); setN2(0); setOp("default_0");
+        setR(0); setN1(0); setN2(0); setOp("default_0"); setTargetN("N1");
         console.clear();
         console.log("Cleared Calculator!");
+    }
+    const result = () =>{
+        if(Op == "+"){
+            setR(N1 + N2);
+        }else if(Op == "-"){
+            setR(N1 - N2);
+        }else if(Op == "*"){
+            setR(N1 * N2);
+        }else if(Op == "/"){
+            setR(N1 / N2);
+        }else if(Op == "default_O"){
+            setR(N1);
+        }
+        setOp("default_O"); setTargetN("N1");
+        console.log("The result: "+ R + " the Operator: "+Op);
     }
 
     const addNumber = (number) => {
@@ -88,7 +104,7 @@ export default function CalculatorBox(){
 
             <div id="CalculatorAC">
                 <Operator_bAC clearAc={clearAc}/>
-                <Operator_b value={"="}/>
+                <Result_b result={result}/>
             </div>
            <div id="Calculator1-9">
                 <NumericB addNumber={addNumber} value={7}/>
