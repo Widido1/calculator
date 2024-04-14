@@ -13,6 +13,12 @@ export default function CalculatorBox(){
     const [R, setR] = useState(0);
     const [targetN, setTargetN] = useState("N1");
 
+    const clearAc = () => {
+        setR(0); setN1(0); setN2(0); setOp("default_0");
+        console.clear();
+        console.log("Cleared Calculator!");
+    }
+
     const addNumber = (number) => {
         if(targetN == "N1"){
             let resulter = N1*10 + number;
@@ -81,7 +87,7 @@ export default function CalculatorBox(){
             </div>
 
             <div id="CalculatorAC">
-                <Operator_bAC/>
+                <Operator_bAC clearAc={clearAc}/>
                 <Operator_b value={"="}/>
             </div>
            <div id="Calculator1-9">

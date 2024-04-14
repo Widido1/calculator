@@ -4,7 +4,7 @@ export default function Operator_bAC(props){
 
     return(
         <div>
-            <button className="bAC">AC</button>
+            <button className="bAC" onClick ={() => props.clearAc()}>AC</button>
         </div>
     )
 }
