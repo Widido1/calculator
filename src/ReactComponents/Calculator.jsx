@@ -19,6 +19,9 @@ export default function CalculatorBox(){
     const [screenN, setScreenN] = useState("");
     
     const valueScreen = (value) => {
+        if(targetN == "N1"){
+            setScreenN(value);
+        }
         setScreenN(screenN + value);
     }
 
@@ -32,17 +35,18 @@ export default function CalculatorBox(){
     }
     const result = () =>{
         if(Op == "+"){
-            setR(N1 + N2);
+            setR(N1 + (N2+decimal[0]));
         }else if(Op == "-"){
-            setR(N1 - N2);
+            setR(N1 - (N2+decimal[0]));
         }else if(Op == "*"){
-            setR(N1 * N2);
+            setR(N1 * (N2+decimal[0]));
         }else if(Op == "/"){
-            setR(N1 / N2);
+            setR(N1 / (N2+decimal[0]));
         }else if(Op == "default_O"){
             setR(N1);
         }
-        setOp("default_O"); setTargetN("N1"); setIsDecimal(false);
+        setN1(0); setN2(0);
+        setOp("default_O"); setTargetN("N1"); setIsDecimal(false); setDecimal([0, 0.1])
         console.log("The result: "+ R + " the Operator: "+Op);
     }
 
@@ -61,7 +65,7 @@ export default function CalculatorBox(){
 
         }else if(R != 0){
             setN1(R);
-            setR(0); setScreenN("");
+            setR(0);
             if(isDecimal){
                 let des = (decimal[0]) + (number*decimal[1]);
                 let ndes = decimal[1] * 0.1; 
@@ -105,7 +109,7 @@ export default function CalculatorBox(){
     const addOperator = (button_O) =>{
         setIsDecimal(false);
         if(targetN == "N1"){
-            setN1(N1 + decimal[0]); setDecimal([0,0.1]);
+            setN1(N1 + decimal[0]); setDecimal([0, 0.1]);
             switch(button_O){
                 case "+":
                     setOp("+"); setTargetN("N2"); console.log("switch: Operator: +"); 
@@ -126,7 +130,7 @@ export default function CalculatorBox(){
             console.log("llegamos a addResult()");
             addResult();
             console.log(" Operator: "+ Op);
-            setN1(0); setN2(0); setOp(button_O); setDecimal([0,0.1]); console.log(" Operator: "+ Op);
+            setN1(0); setN2(0); setOp(button_O); setDecimal([0, 0.1]); console.log(" Operator: "+ Op);
         }
     }
     return(
