@@ -16,9 +16,14 @@ export default function CalculatorBox(){
     const [targetN, setTargetN] = useState("N1");
     const [isDecimal, setIsDecimal] = useState(false);
     const [decimal, setDecimal] = useState([0, 0.1]);
+    const [screenN, setScreenN] = useState("");
+    
+    const valueScreen = (value) => {
+        setScreenN(screenN + value);
+    }
 
     const clearAc = () => {
-        setR(0); setN1(0); setN2(0); setOp("default_0"); setTargetN("N1");
+        setR(0); setN1(0); setN2(0); setOp("default_0"); setTargetN("N1"); setScreenN("");
         console.clear();
         console.log("Cleared Calculator!");
     }
@@ -56,7 +61,7 @@ export default function CalculatorBox(){
 
         }else if(R != 0){
             setN1(R);
-            setR(0);
+            setR(0); setScreenN("");
             if(isDecimal){
                 let des = (decimal[0]) + (number*decimal[1]);
                 let ndes = decimal[1] * 0.1; 
@@ -127,7 +132,7 @@ export default function CalculatorBox(){
     return(
         <div id="Calculator">
             <div>
-                <Screen />
+                <Screen valueScreen={valueScreen} R={R} screenN={screenN}/>
             </div>
 
             <div id="CalculatorAC">
@@ -135,23 +140,23 @@ export default function CalculatorBox(){
                 <Result_b result={result}/>
             </div>
            <div id="Calculator1-9">
-                <NumericB addNumber={addNumber} value={7}/>
-                <NumericB addNumber={addNumber} value={8}/>
-                <NumericB addNumber={addNumber} value={9}/>
-                <Operator_b addOperator={addOperator} value={"+"}/>
-                <NumericB addNumber={addNumber} value={4}/>
-                <NumericB addNumber={addNumber} value={5}/>
-                <NumericB addNumber={addNumber} value={6}/>
-                <Operator_b addOperator={addOperator} value={"-"}/>
-                <NumericB addNumber={addNumber} value={1}/>
-                <NumericB addNumber={addNumber} value={2}/>
-                <NumericB addNumber={addNumber} value={3}/>
-                <Operator_b addOperator={addOperator} value={"*"}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={7}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={8}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={9}/>
+                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"+"}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={4}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={5}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={6}/>
+                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"-"}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={1}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={2}/>
+                <NumericB addNumber={addNumber} valueScreen={valueScreen} value={3}/>
+                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"*"}/>
             </div>
             <div id="Calculator0">
-                <NumericB0 addNumber={addNumber}/>
-                <Decimal_b decimaler={decimaler}/>
-                <Operator_b addOperator={addOperator} value={"/"}/>
+                <NumericB0 addNumber={addNumber} valueScreen={valueScreen} value={0}/>
+                <Decimal_b decimaler={decimaler} valueScreen={valueScreen} value={"."}/>
+                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"/"}/>
             </div> 
 
 
