@@ -18,6 +18,8 @@ export default function CalculatorBox(){
     const [decimal, setDecimal] = useState([0, 0.1]);
     const [screenN, setScreenN] = useState("");
     
+
+
     const valueScreen = (value) => {
         if(targetN == "N1"){
             setScreenN(value);
@@ -46,7 +48,7 @@ export default function CalculatorBox(){
             setR(N1);
         }
         setN1(0); setN2(0);
-        setOp("default_O"); setTargetN("N1"); setIsDecimal(false); setDecimal([0, 0.1])
+        setOp("default_O"); setTargetN("N1"); setIsDecimal(false); setDecimal([0, 0.1]); setScreenN("");
         console.log("The result: "+ R + " the Operator: "+Op);
     }
 
@@ -141,7 +143,7 @@ export default function CalculatorBox(){
 
             <div id="CalculatorAC">
                 <Operator_bAC clearAc={clearAc}/>
-                <Result_b result={result}/>
+                <Result_b result={result} />
             </div>
            <div id="Calculator1-9">
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={7}/>
