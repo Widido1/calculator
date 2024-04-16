@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   padding: 0;
   margin: 0;
@@ -11,12 +12,7 @@ body {
   height: 100vh;
   background-color: #434340;
 }
-.b0{
-  border-radius: 15px;
-  background-color: #FFFD81;
-  min-width: 115px;
-  height: 50px;
-}
+
 .b1{
   border-radius: 15px;
   background-color: #FFFD81;
@@ -38,9 +34,16 @@ body {
   background-color: #C9FFA6;
 }
 
+.b0{
+  border-radius: 15px;
+  background-color: #FFFD81;
+  min-width: 115px;
+  height: 50px;
+}
+
 .bAC{
   border-radius: 15px;
-  background-color: #00a8a8;
+  background-color: #00c4c4;
   min-width: 175px;
   height: 50px;
 }
@@ -106,9 +109,11 @@ body {
   border-radius: 0px 0px 15px 15px;
 }
 
-#Number_Box{
-  background-color: green;
-  width: 100px;
-  height: 50px;
-  z-index: 1;
+@media only screen and (max-width: 320px) {
+  body{
+    height:auto;
+  }
+  #Calculator{
+    max-width: 300px;
+  }
 }
