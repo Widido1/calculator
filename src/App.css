@@ -109,6 +109,8 @@ body {
   border-radius: 0px 0px 15px 15px;
 }
 
+/*Todavía no usaba tailwind xd*/
+
 @media only screen and (max-width: 320px) {
   body{
     height:auto;

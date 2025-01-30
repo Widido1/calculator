@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 export default function Screen(props){
+    //usa dos pantallas, la que va llevando registro de la operacion y la del resultado
 
     return(
         <div id="CalculatorScreen">
