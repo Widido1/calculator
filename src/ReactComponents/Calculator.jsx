@@ -4,7 +4,7 @@ import Operator_bAC from "./Operator_bAC";
 import Screen from "./Screen";
 import Result_b from "./Result_b";
 import Decimal_b from "./Decimal_b";
-import NumericB from "./Numeric_b";
+import NumericB from "./Numeric_b"; 
 import NumericB0 from "./Numeric_b0";
 
 //este componente ejecuta la mayoría de las operaciones de la calculadora
@@ -19,7 +19,7 @@ export default function CalculatorBox(){
     const [decimal, setDecimal] = useState([0, 0.1]); //el primer valor es el decimal que se va a agregar al numero targeteado, el segundo sirve para saber la hubicacion de cada nuevo numero dentro del decimal
     const [screenN, setScreenN] = useState(""); //contiene un string, que es lo que se muestra en la pantallita de la calculadora
     
-
+    //=================00====================
 
     const valueScreen = (value) => {
         //si el numero, es el primero que se ingresa en el calculo, la pantalla muestra solo ese numero
