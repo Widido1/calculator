@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import NumericB from "./numeric_b";
-import NumericB0 from "./numeric_b0";
 import Operator_b from "./Operator_b";
 import Operator_bAC from "./Operator_bAC";
 import Screen from "./Screen";
 import Result_b from "./Result_b";
 import Decimal_b from "./Decimal_b";
+import NumericB from "./numeric_b";
+import NumericB0 from "./numeric_b0";
 
 //este componente ejecuta la mayoría de las operaciones de la calculadora
 
