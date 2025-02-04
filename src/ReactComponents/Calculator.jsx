@@ -7,6 +7,7 @@ import Decimal_b from "./Decimal_b";
 import NumericB from "./Numeric_b"; 
 import NumericB0 from "./Numeric_b0";
 
+
 //este componente ejecuta la mayoría de las operaciones de la calculadora
 
 export default function CalculatorBox(){
