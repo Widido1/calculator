@@ -1,4 +1,4 @@
-export default function Decimal_b(props){
+export default function DecimalB(props){
     //pone en true el boolean de decimal y agrega el "." a la pantalla
     return(
         <div>

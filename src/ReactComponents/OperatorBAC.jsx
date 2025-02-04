@@ -1,5 +1,5 @@
 
-export default function Operator_bAC(props){
+export default function OperatorBAC(props){
     //ejecuta la funcion clearAc() que se le pasa como propiedad cuando se aprieta
     return(
         <div>

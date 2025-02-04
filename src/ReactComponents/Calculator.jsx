@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import Operator_b from "./Operator_b";
-import Operator_bAC from "./Operator_bAC";
 import Screen from "./Screen";
-import Result_b from "./Result_b";
-import Decimal_b from "./Decimal_b";
-import NumericB from "./Numeric_b"; 
-import NumericB0 from "./Numeric_b0";
+import NumericB from "./NumericB"; 
+import NumericB0 from "./NumericB0";
+import OperatorB from "./OperatorB";
+import OperatorBAC from "./OperatorBAC";
+import ResultB from "./ResultB";
+import DecimalB from "./DecimalB";
 
 
 //este componente ejecuta la mayoría de las operaciones de la calculadora
@@ -24,7 +24,7 @@ export default function CalculatorBox(){
 
     const valueScreen = (value) => {
         //si el numero, es el primero que se ingresa en el calculo, la pantalla muestra solo ese numero
-        if(targetN == "N1"){
+        if(targetN === "N1"){
             setScreenN(value);
         }
         //si el numero no es el primero, muestra en la pantalla lo que ya había sumado al valor en cuestion
@@ -47,7 +47,7 @@ export default function CalculatorBox(){
 
     const addNumber = (number) => {
         // Primero determina si es el primer numero que se ingresa o si ya habia un resultado previo, para agregar el numero
-        if(targetN == "N1"){
+        if(targetN === "N1"){
             //Si es el primer numero que se agrega a la operación, 
             if(isDecimal){
                 let des = (decimal[0]) + (number*decimal[1]);
@@ -61,7 +61,7 @@ export default function CalculatorBox(){
                 setR(0); //el resultado es 0, porque aún el numero no fue parte de ninguna operación.
             }
 
-        }else if(R != 0){
+        }else if(R !== 0){
             //Si no es el primer numero, pero ya hay un resultado.
             setN1(R); // el primer numero se vuelve el resultado.
             setR(0); // el resultado se vuelve 0.
@@ -92,7 +92,7 @@ export default function CalculatorBox(){
     const addOperator = (button_O) =>{
         //agrega el operador presionado, si es la primera operacion, solamente se agrega el operador, sino se calcula el resultado y luego se agrega
         setIsDecimal(false);
-        if(targetN == "N1"){
+        if(targetN === "N1"){
             setN1(N1 + decimal[0]); setDecimal([0, 0.1]); //se le agrega el numero decimal a N1 y se resetea el multiplicador a 0.1
             switch(button_O){
                 //se asigna el operador correspondiente y se pasa a targetear el numero 2
@@ -120,16 +120,16 @@ export default function CalculatorBox(){
 
     const addResult = () =>{
         //añande el decimal al segundo numero y despues calcula la operacion asignada con N1 y N2, ese resultado lo asigna a res
-        if(Op == "+"){
+        if(Op === "+"){
             let res = N1 + (N2+decimal[0]);
             setR(res);
-        }else if(Op == "-"){
+        }else if(Op === "-"){
             let res = N1 - (N2+decimal[0]);
             setR(res);
-        }else if(Op == "*"){
+        }else if(Op === "*"){
             let res = N1*(N2+decimal[0]);
             setR(res);
-        }else if(Op == "/"){
+        }else if(Op === "/"){
             let res = N1/(N2+decimal[0]);
             setR(res);
 
@@ -138,15 +138,15 @@ export default function CalculatorBox(){
 
     const result = () =>{
         //este es como el anterior pero se activa al precionar el boton = , calcula y muestra el resultado, pero resetea todo en vez de guardar el operador. 
-        if(Op == "+"){
+        if(Op === "+"){
             setR(N1 + (N2+decimal[0]));
-        }else if(Op == "-"){
+        }else if(Op === "-"){
             setR(N1 - (N2+decimal[0]));
-        }else if(Op == "*"){
+        }else if(Op === "*"){
             setR(N1 * (N2+decimal[0]));
-        }else if(Op == "/"){
+        }else if(Op === "/"){
             setR(N1 / (N2+decimal[0]));
-        }else if(Op == "default_O"){
+        }else if(Op === "default_O"){
             setR(N1);
         }
         setN1(0); setN2(0);
@@ -160,27 +160,27 @@ export default function CalculatorBox(){
             </div>
 
             <div id="CalculatorAC">
-                <Operator_bAC clearAc={clearAc}/>
-                <Result_b result={result} />
+                <OperatorBAC clearAc={clearAc}/>
+                <ResultB result={result} />
             </div>
            <div id="Calculator1-9">
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={7}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={8}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={9}/>
-                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"+"}/>
+                <OperatorB addOperator={addOperator} valueScreen={valueScreen} value={"+"}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={4}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={5}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={6}/>
-                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"-"}/>
+                <OperatorB addOperator={addOperator} valueScreen={valueScreen} value={"-"}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={1}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={2}/>
                 <NumericB addNumber={addNumber} valueScreen={valueScreen} value={3}/>
-                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"*"}/>
+                <OperatorB addOperator={addOperator} valueScreen={valueScreen} value={"*"}/>
             </div>
             <div id="Calculator0">
                 <NumericB0 addNumber={addNumber} valueScreen={valueScreen} value={0}/>
-                <Decimal_b decimaler={decimaler} valueScreen={valueScreen} value={"."}/>
-                <Operator_b addOperator={addOperator} valueScreen={valueScreen} value={"/"}/>
+                <DecimalB decimaler={decimaler} valueScreen={valueScreen} value={"."}/>
+                <OperatorB addOperator={addOperator} valueScreen={valueScreen} value={"/"}/>
             </div> 
 
 

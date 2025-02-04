@@ -1,5 +1,5 @@
 
-export default function Result_b(props){
+export default function ResultB(props){
     //Ejecuta result() que se le pasa como propiedad cuando se aprieta
     return(
         <div>

@@ -1,4 +1,4 @@
-export default function Clear_b(){
+export default function ClearB(){
     return(
         <div>
             <button className="b2">C</button>
