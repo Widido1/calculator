@@ -4,8 +4,8 @@ import Operator_bAC from "./Operator_bAC";
 import Screen from "./Screen";
 import Result_b from "./Result_b";
 import Decimal_b from "./Decimal_b";
-import NumericB from "./numeric_b";
-import NumericB0 from "./numeric_b0";
+import NumericB from "./Numeric_b";
+import NumericB0 from "./Numeric_b0";
 
 //este componente ejecuta la mayoría de las operaciones de la calculadora
 
